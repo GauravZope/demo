@@ -28,17 +28,14 @@ var app = {
 if( window.plugins && window.plugins.NativeAudio ) {
     
     // Preload audio resources 
-    window.plugins.NativeAudio.preloadComplex( 'music', 'Alan Walker - Alone.mp3', 1, 1, 0, function(msg){
+    window.plugins.NativeAudio.preloadComplex( 'music',
+     'Alan Walker - Alone.mp3', 1, 1, 0, function(msg){
+     	alert( "Yeaaaaah" );
     }, function(msg){
-        console.log( 'error: ' + msg );
+        alert( 'error: ' + msg );
     });
     
-   s
- 
- 
-    // Play 
     window.plugins.NativeAudio.loop( 'music' );
- 
  
     // Stop multichannel clip after 60 seconds 
     window.setTimeout( function(){
