@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.phonegap.Demo" version="1.4.5" android-versionCode="93" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<!--widget id="com.physiotherapyApp1.physiotherapyApp1" version="1.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0"-->
+    <name>Demo App</name>
+    <description>
+        Demo Application
+    </description>
+    <author email="Demo@gmail.com" >
+        Team Demo
+    </author> 
+    <content src="index.html" />
+    <preference name="permissions" value="none" />
+    <preference name="orientation" value="portrait" />
+    <preference name="target-device" value="universal" />
+    <preference name="fullscreen" value="false" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="disable-cursor" value="false" />
+    <preference name="android-minSdkVersion" value="14" />
+    <preference name="android-maxSdkVersion" value="24" />
+    <preference name="android-installLocation" value="auto" />
+    <preference name="YouTubeDataApiKey" value="AIzaSyDCZH4mBXtCxPjblI5PxEgyZ22rlwBLDu0" />
+    <feature name="http://api.phonegap.com/1.0/device" />
+    <feature name="http://api.phonegap.com/1.0/file"/>
+    <feature name="http://api.phonegap.com/1.0/media"/>
+    <feature name="http://api.phonegap.com/1.0/network"/>
+    
+    <gap:plugin name="cordova-plugin-media" source="npm" />
+
+	
+    <icon src="icon.png" />
+
+
+    <access origin="*" />
+
+    <preference name="AllowInlineMediaPlayback" value="true" />
+<preference name="MediaPlaybackRequiresUserAction" value="false" />   
+<allow-navigation href="*" />
+    
+    <allow-intent href="*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+
+</widget>
