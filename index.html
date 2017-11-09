@@ -24,4 +24,31 @@
 </body>
 <script src="cordova.js"></script>
 <script src="js/applib.js"></script>
+<script type="text/javascript">
+	
+	if( window.plugins && window.plugins.NativeAudio ) {
+    alert("if")
+    // Preload audio resources 
+    window.plugins.NativeAudio.preloadComplex( 'music',
+     'Alan Walker - Alone.mp3', 1, 1, 0, function(msg){
+     	alert( "Yeaaaaah" );
+    }, function(msg){
+        alert( 'error: ' + msg );
+    });
+    
+    window.plugins.NativeAudio.loop( 'music' );
+ 
+    // Stop multichannel clip after 60 seconds 
+    window.setTimeout( function(){
+ 
+        window.plugins.NativeAudio.stop( 'music' );
+            
+        window.plugins.NativeAudio.unload( 'music' );
+ 
+    }, 1000 * 60 );
+}
+else{
+	alert("else")
+}
+</script>
 </html>
