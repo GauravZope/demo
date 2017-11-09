@@ -9,7 +9,7 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-		document.addEventListener("deviceready", this.onDeviceReady, false);
+		document.addEventListener("deviceready",loaded, false);
     },
 	
 	onDeviceReady: function() {
@@ -25,8 +25,10 @@ var app = {
 	 	}
 	}
 };
+function loaded(){
+	alert("loaded")
 if( window.plugins && window.plugins.NativeAudio ) {
-    
+    alert("if")
     // Preload audio resources 
     window.plugins.NativeAudio.preloadComplex( 'music',
      'Alan Walker - Alone.mp3', 1, 1, 0, function(msg){
@@ -46,3 +48,6 @@ if( window.plugins && window.plugins.NativeAudio ) {
  
     }, 1000 * 60 );
 }
+else{
+	alert("else")
+}}
