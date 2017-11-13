@@ -1,0 +1,16 @@
+<div class="scrollable">
+	<div class="scrollable-content container" ng-controller="EventController">
+		<div class="widget" ng-repeat="item in events" >
+		    <div class="event col-sm-9" ng-click="window.open('{{item.link}}', '_blank', 'closebuttoncaption=Fechar')">
+		    	<div class="event event-date col-sm-3 col-md-3">
+			   		<div class="month">{{item.month}}</div>
+			   		<div class="day">{{item.day}}</div>
+			    </div>
+			    <div class="event-info">
+			   		<h4>{{item.title}}</h4>
+			   		<div class="description">{{item.locale}}</div><br>
+			    </div>
+		    </div>
+        </div>
+    </div>
+</div>

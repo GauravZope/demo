@@ -1,0 +1,21 @@
+<div content-for="title">
+  <span>Contato</span>
+</div>
+<div class="scrollable">
+	<div class="scrollable-content section">
+   		<form action="" id="">
+     		<div bs-panel>
+       			<input bs-form-control type="text" ng-model="invoice.customer" label="Nome" label-class="col-xs-3 col-sm-2 col-lg-1" class="col-xs-9 col-sm-10 col-lg-11" placeholder="Nome"/>
+       			<input bs-form-control type="text" ng-model="invoice.customer" label="Email" label-class="col-xs-3 col-sm-2 col-lg-1" class="col-xs-9 col-sm-10 col-lg-11" placeholder="Email"/>
+		      	<textarea type="text" ng-model="customer.mailing_address" label="Mensagem" bs-form-control></textarea>
+      		</div>
+	   </form>
+	   <div bs-panel class="form-actions">
+	      <div content-for="navbarAction" duplicate>
+	        <button class="btn btn-primary">
+	          Enviar
+	        </button>
+	      </div>
+	    </div>
+	</div>
+</div>

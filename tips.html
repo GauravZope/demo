@@ -1,0 +1,24 @@
+<div class="scrollable">
+	<div class="scrollable-content container">
+		<div ng-repeat="item in trip">
+			<div class="widget" >
+	            <div id="{{item.id}}" ng-click="goPost({{item.id}}, trip)">
+			        <div class="post-thumb" >
+			        	<p><img src="{{item.fileurl}}"></p>
+			        </div>
+	            	<div class="list-group-item media post">
+				        <div class="media-body">
+				            <div class="post-title" ng-bind-html="item.title"></div>
+				            <div class="post-date">{{item.postdate}}</div>
+				        </div>
+					</div>
+				</div>
+	        </div>
+            <div ng-if="hasAd($index)" class="ad">
+                <a ng-click="openLink(ads[(($index + 1)/5) - 1].redirect)">
+                    <img ng-src="{{ads[(($index + 1)/5) - 1].filename}}">
+                </a>
+            </div>
+		</div>
+    </div>
+</div>

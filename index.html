@@ -1,54 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
- <meta http-equiv="Content-Security-Policy" 
-             content="default-src *; 
-                      style-src * 'self' 'unsafe-inline' 'unsafe-eval'; 
-                      script-src * 'self' 'unsafe-inline' 'unsafe-eval';">
-<title>Physiotherapy Patient Monitoring System</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-</head>
-<body  >
-<!--login modal-->
-	<!-- <div id="wrapper">
-		<iframe width="360" height="300" src="https://www.youtube.com/embed/fvbywTKJIcI" frameborder="0" allowfullscreen>
-			
-		</iframe>
-	</div> -->
-
-	<button onclick="playMusic();">Play</button>
-</br>
-	<button onclick="StopMusic();">stop</button>
-<!-- script references -->
-</body>
-<script src="cordova.js"></script>
-<script src="js/applib.js"></script>
-<script type="text/javascript">
-	
-	if( true ) {
-    alert("if")
-    // Preload audio resources 
-    window.plugins.NativeAudio.preloadComplex( 'music',
-     'Alan Walker - Alone.mp3', 1, 1, 0, function(msg){
-     	alert( "Yeaaaaah" );
-    }, function(msg){
-        alert( 'error: ' + msg );
-    });
-    
-    window.plugins.NativeAudio.loop( 'music' );
- 
-    // Stop multichannel clip after 60 seconds 
-    window.setTimeout( function(){
- 
-        window.plugins.NativeAudio.stop( 'music' );
-            
-        window.plugins.NativeAudio.unload( 'music' );
- 
-    }, 1000 * 60 );
-}
-else{
-	alert("else")
-}
-</script>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Hotelier</title>
+		<link rel="stylesheet" href="lib/mobile-angular/mobile-angular-ui-base.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="lib/shadowbox/shadowbox.css">
+	</head>
+	<body ng-app="hotelier" ng-controller="MainController">
+		<div ng-include="'sidebar.html'" class="sidebar sidebar-left" toggleable parent-active-class="sidebar-left-in" id="mainSidebar"></div>
+		<div class="app">
+	      <div class="navbar navbar-app navbar-absolute-top">
+	      	<div class="top-bar">
+		        <div class="navbar-brand navbar-brand-center" yield-to="title">
+		          <span><img class="logo" src="img/hotelier_logo.png"></span>
+		        </div>
+		        <div class="btn-group pull-left" yield-to="left-top">
+		          <div ng-click="toggle('mainSidebar')" class="btn btn-navbar sidebar-toggle">
+		            <i class="fa fa-bars"></i> Menu
+		          </div>
+		        </div>
+	      	</div>
+	      </div>
+	      <div class="app-body" ng-class="{loading: loading}">
+	        <div ng-show="loading" class="app-content-loading">
+	          <i class="fa fa-spinner fa-spin loading-spinner"></i>
+	        </div>
+	        <ng-view class="app-content" ng-hide="loading"></ng-view>
+	      </div>
+	    </div>
+        <script type="text/javascript" src="cordova.js"></script>
+		<script src="lib/angular/angular.min.js"></script>
+		<script src="lib/angular/angular-sanitize.min.js"></script>
+		<script src="lib/mobile-angular/mobile-angular-ui.min.js"></script>
+		<script src="lib/mobile-angular/angular-route.min.js"></script>
+		<script src="lib/mobile-angular/angular-touch.min.js"></script>
+		<script src="js/hotelier.js"></script>
+	</body>
 </html>

@@ -1,0 +1,25 @@
+.app-body {background-color: #DDDDDD;}
+.conheca {margin-top: 25px; margin-left: 4px;}
+.conheca a img {background-color: #79D475; margin-left: 10px;}
+.conheca a {padding: 0 3px 0 3px !important;}
+.conheca div {margin-top: 6px; width: 100%;}
+.top-bar, .app-search {margin-top: 15px;}
+#sb-player {max-width: 300% !important; z-index: 999999}
+#sb-drag-proxy {z-index: 999999}
+.logo {width: 140px; top: -15px; position: relative;}
+.inAppBrowserWrap {background-color: #EA2E49;}
+.widget {box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); box-sizing: border-box; margin-top: 15px; background-color:white;}
+.post-thumb {background-color: white; width: 100%; height: 200px; background-position: center; background-repeat: no-repeat; text-align: center;}
+.post-thumb img {height: 200px;}
+.post-date {font-weight: 500}
+.post .post-title {font-size: 18px; font-weight: 400; margin-bottom: 4px; }
+.ad {color: white; text-align: center; margin-top: 15px !important;}
+.news hr {width: 90%;}
+.news img {width: 100% !important; height: initial !Important;}
+.news-title {font-size: 21px; font-weight: 400; margin-bottom: 5px; font-weight: 200;}
+.news-text {text-align: justify; margin-top: 15px;}
+a {background: transparent; color: inherit; text-decoration: inherit;}
+.soon {text-align: center;}
+.event {width: 100%; background-color: white; padding-top: 10px; padding-bottom: 10px; float: left; margin-bottom: 15px;}
+.event-date {width: 20%; background-color: #B11015; color: white; text-align: center; font-weight: 400; font-size: 18px;}
+.event-info { margin-left: 20%; padding-left: 20px; width: 80%;}
